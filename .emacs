@@ -4,6 +4,9 @@
 (blink-cursor-mode 0)
 
 (setq inhibit-startup-screen t)
+(setq initial-scratch-message "
+hello!
+")
 
 (set-frame-font "terminus" nil t)
 
