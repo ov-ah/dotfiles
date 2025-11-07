@@ -10,6 +10,12 @@ hello!
 
 (set-frame-font "terminus" nil t)
 
+; Source - https://stackoverflow.com/a
+; Posted by Bozhidar Batsov, modified by community. See post 'Timeline' for change history
+; Retrieved 2025-11-07, License - CC BY-SA 3.0
+(add-hook 'prog-mode-hook 'linum-mode)
+
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
