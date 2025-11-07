@@ -3,6 +3,8 @@
 (scroll-bar-mode 0)
 (blink-cursor-mode 0)
 
+(setq inhibit-startup-screen t)
+
 (set-frame-font "terminus" nil t)
 
 (require 'package)
