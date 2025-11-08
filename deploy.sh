@@ -34,6 +34,7 @@ echo "$FONT_SIZE" > "$CONFIG_FILE"
 ln -sf "$HOME/dotfiles/.emacs" "$HOME/.emacs"
 ln -sf "$HOME/dotfiles/dwm-config.h" "$HOME/dwm/config.h"
 ln -sf "$HOME/dotfiles/st-config.h" "$HOME/st/config.h"
+ln -sf "$HOME/dotfiles/slstatus-config.h" "$HOME/slstatus/config.h"
 
 echo "[OK] symlinks created"
 
@@ -43,6 +44,9 @@ sudo make clean install
 echo "[OK] built dwm"
 
 cd "$HOME/st"
+sudo make clean install
+
+cd "$HOME/slstatus"
 sudo make clean install
 
 echo "[OK] built st"
