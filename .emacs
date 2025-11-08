@@ -32,6 +32,8 @@
     ⠀⠀⠀⠀⠈⠙⠛⠻⠿⠿⠟⠋⠹⠿⠿⠛⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠈⠙⠛⠛⠛⠋⠉⠀⠀⠀⠀⠀
 
 welcome back to emacs <3
+
+penis!
 ")
 
 (set-frame-font "terminus" nil t)
