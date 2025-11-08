@@ -3,6 +3,16 @@
 (scroll-bar-mode 0)
 (blink-cursor-mode 0)
 
+(use-package completion-preview
+  :ensure t
+  :config
+  (global-completion-preview-mode)
+  (push 'org-self-inser-command completion-preview-commands))
+
+(fido-vertical-mode)
+(fido-mode)
+(define-key icomplete-minibuffer-map (kbd "<tab>") 'icomplete-force-complete)
+
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "
 ⠀⠀⠀⠸⣿⣿⣷⣶⣤⣤⣤⣤⣤⣴⣾⡷⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣧⣶⣶⣦⣤⣀⠤⡀⠀⠀⠀⠀⠀⠀
@@ -50,8 +60,9 @@ welcome back to emacs <3
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 (require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;;(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
