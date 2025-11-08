@@ -95,35 +95,34 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+    /* 8 normal colors */
+    "#101010",  // black      → gruber-darker-bg-1
+    "#c73c3f",  // red        → gruber-darker-red-1
+    "#73c936",  // green      → gruber-darker-green
+    "#ffdd33",  // yellow     → gruber-darker-yellow
+    "#96a6c8",  // blue       → gruber-darker-niagara
+    "#9e95c7",  // magenta    → gruber-darker-wisteria
+    "#95a99f",  // cyan       → gruber-darker-quartz
+    "#e4e4ef",  // white      → gruber-darker-fg
 
-	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+    /* 8 bright colors */
+    "#282828",  // bright black → gruber-darker-bg+1
+    "#f43841",  // bright red   → gruber-darker-red
+    "#73c936",  // bright green → same as green
+    "#ffdd33",  // bright yellow
+    "#303540",  // bright blue  → gruber-darker-niagara-2
+    "#9e95c7",  // bright magenta → same as magenta
+    "#95a99f",  // bright cyan  → same as cyan
+    "#f4f4ff",  // bright white → gruber-darker-fg+1
 
-	[255] = 0,
+    [255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+    /* default colors */
+    "#cccccc",
+    "#555555",
+    "#e4e4ef", // foreground → gruber-darker-fg
+    "#181818", // background → gruber-darker-bg
 };
-
 
 /*
  * Default colors (colorname index)
