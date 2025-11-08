@@ -1,3 +1,7 @@
+#define FONT_SIZE 12
+#define XSTR(x) #x
+#define STRINGIFY(x) XSTR(x)
+
 /* See LICENSE file for copyright and license details. */
 
 /*
@@ -5,7 +9,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "terminus:pixelsize=12";
+static char *font = "terminus:size=" STRINGIFY(FONT_SIZE);
 static int borderpx = 2;
 
 /*

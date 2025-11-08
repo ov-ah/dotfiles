@@ -34,7 +34,18 @@
 welcome back to emacs <3
 ")
 
-(set-frame-font "terminus" nil t)
+(defun my/set-font-size ()
+  "Set Emacs font size based on configuration file."
+  (let ((config-file (expand-file-name "~/.font_config")))
+    (when (file-exists-p config-file)
+      (let* ((font-size (with-temp-buffer
+                          (insert-file-contents config-file)
+                          (string-to-number (string-trim (buffer-string)))))
+             (font-spec (format "Terminus-%d" font-size)))
+        (set-face-attribute 'default nil :font font-spec :height (* font-size 10))
+        (set-frame-font font-spec t t)))))
+(add-hook 'after-init-hook #'my/set-font-size)
+
 
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
