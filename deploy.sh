@@ -7,7 +7,7 @@ CONFIG_FILE="$HOME/.font_config"
 if [ -f "$CONFIG_FILE" ]; then
     FONT_SIZE=$(cat "$CONFIG_FILE")
 else
-    FONT_SIZE="14"
+    FONT_SIZE="12"
 fi
 
 while [[ $# -gt 0 ]]; do
