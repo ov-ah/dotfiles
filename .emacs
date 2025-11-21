@@ -3,6 +3,10 @@
 (scroll-bar-mode 0)
 (blink-cursor-mode 0)
 
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (play-sound-file "~/dotfiles/welcome.wav")))
+
 (use-package completion-preview
   :ensure t
   :config
@@ -11,7 +15,7 @@
 
 (fido-vertical-mode)
 (fido-mode)
-(define-key icomplete-minibuffer-map (kbd "<tab>") 'icomplete-force-complete)
+(define-key icomplete-minibuffer-map (kbd "<tab>") 'icomplete-force-complete) ;; hacky force tab completion
 
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "
