@@ -32,6 +32,7 @@ sed -i "s/#define FONT_SIZE [0-9]*/#define FONT_SIZE $FONT_SIZE/" "$HOME/dotfile
 echo "$FONT_SIZE" > "$CONFIG_FILE"
 
 ln -sf "$HOME/dotfiles/.emacs" "$HOME/.emacs"
+ls -sf "$HOME/dotfiles/.xinitrc " "$HOME/.xinitrc"
 ln -sf "$HOME/dotfiles/st-config.h" "$HOME/st/config.h"
 ln -sf "$HOME/dotfiles/slstatus-config.h" "$HOME/slstatus/config.h"
 
