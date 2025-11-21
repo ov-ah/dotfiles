@@ -27,12 +27,12 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-sed -i "s/#define FONT_SIZE [0-9]*/#define FONT_SIZE $FONT_SIZE/" "$HOME/dotfiles/dwm-config.h"
+sed -i "s/#define FONT_SIZE [0-9]*/#define FONT_SIZE $FONT_SIZE/" "$HOME/dotfiles/dwm/config.h"
 sed -i "s/#define FONT_SIZE [0-9]*/#define FONT_SIZE $FONT_SIZE/" "$HOME/dotfiles/st-config.h"
 echo "$FONT_SIZE" > "$CONFIG_FILE"
 
 ln -sf "$HOME/dotfiles/.emacs" "$HOME/.emacs"
-ln -sf "$HOME/dotfiles/dwm-config.h" "$HOME/dwm/config.h"
+ln -sf "$HOME/dotfiles/dwm" "$HOME/dwm"
 ln -sf "$HOME/dotfiles/st-config.h" "$HOME/st/config.h"
 ln -sf "$HOME/dotfiles/slstatus-config.h" "$HOME/slstatus/config.h"
 
