@@ -32,13 +32,12 @@ sed -i "s/#define FONT_SIZE [0-9]*/#define FONT_SIZE $FONT_SIZE/" "$HOME/dotfile
 echo "$FONT_SIZE" > "$CONFIG_FILE"
 
 ln -sf "$HOME/dotfiles/.emacs" "$HOME/.emacs"
-ln -sf "$HOME/dotfiles/dwm" "$HOME/dwm"
 ln -sf "$HOME/dotfiles/st-config.h" "$HOME/st/config.h"
 ln -sf "$HOME/dotfiles/slstatus-config.h" "$HOME/slstatus/config.h"
 
 echo "[OK] symlinks created"
 
-cd "$HOME/dwm"
+cd "dwm"
 sudo make clean install
 
 echo "[OK] built dwm"
