@@ -1,3 +1,5 @@
 [user]
 	email = admin@ovah.dev
 	name = ovah
+[init]
+	defaultBranch = master

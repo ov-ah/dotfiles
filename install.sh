@@ -12,3 +12,4 @@ link()
 link .vimrc
 link .bashrc
 link .gitconfig
+link .xinitrc
